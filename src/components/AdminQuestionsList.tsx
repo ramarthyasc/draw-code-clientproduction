@@ -128,7 +128,7 @@ function AdminQuestionsList() {
     }
 
     function handleAddMouseDown() {
-        navigate("/admin/question-detail/create");
+        navigate("/administrator/question-detail/create");
     }
 
     async function deleteMouseDown() {
@@ -203,10 +203,10 @@ function AdminQuestionsList() {
                                     <td className="border-r px-2 h-7"> {obj.name} </td>
                                     <td className="border-r px-2 h-7 text-center">{obj.difficulty}</td>
                                     <td className="border-r px-2 h-7 border-black text-blue-700 hover:text-gray-600">
-                                        <Link to={`/admin/question-detail/${obj.name}`}>View/Edit</Link>
+                                        <Link to={`/administrator/question-detail/${obj.name}`}>View/Edit</Link>
                                     </td>
                                     <td className="px-2 text-center h-7 text-blue-700 hover:text-gray-600">
-                                        <Link to={`/admin/question-template/${obj.name}`}>View/Edit</Link>
+                                        <Link to={`/administrator/question-template/${obj.name}`}>View/Edit</Link>
                                     </td>
                                 </tr>
                             )

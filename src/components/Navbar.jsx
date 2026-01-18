@@ -30,13 +30,13 @@ function Navbar({ setIsLoggedIn, isLoggedIn, setJsonWebToken, setUser, user, isA
                     <Link to='/'><img src={logo} alt="home" className='logo' /></Link>
                     {isAdmin ?
                         "" :
-                        <Link to='/admin/question-list' 
+                        <Link to='/administrator/question-list' 
                         className='ml-10 flex pt-2 items-center hover:opacity-80' >Admin</Link>
                     }
 
                 </div>
                 {isAdmin ?
-                    <Link to='/admin/question-list'
+                    <Link to='/administrator/question-list'
                         className={`mt-3 border border-solid px-1.5 py-0 mx-1 my-1 rounded-sm cursor-pointer transition-colors duration-300 ease-out active:scale-100 ${colorVariants["pink"]?.normal}`} 
                     >Admin Panel</Link>
                     : ""

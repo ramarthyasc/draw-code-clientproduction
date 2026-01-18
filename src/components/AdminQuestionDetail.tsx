@@ -130,7 +130,7 @@ function AdminQuestionDetail() {
             if (typeof data !== "string") {
                 setQdetail({ ...data });
                 if (params.qname !== "create") {
-                    navigate(`/admin/question-detail/${data.name}`, { replace: true });
+                    navigate(`/administrator/question-detail/${data.name}`, { replace: true });
                 }
             }
         } else {
@@ -203,7 +203,7 @@ function AdminQuestionDetail() {
         setCreated(true);
         setIsButtonLoading(false);
         //change the url param
-        navigate(`/admin/question-detail/${qdetail.name}`, { replace: true });
+        navigate(`/administrator/question-detail/${qdetail.name}`, { replace: true });
     }
 
     function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {

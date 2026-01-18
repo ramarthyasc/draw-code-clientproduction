@@ -31,7 +31,7 @@ const routes = [
                 ]
             },
             {
-                path: "admin",
+                path: "administrator",
                 children: [
                     {
                         path: "question-list",
