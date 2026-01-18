@@ -1,0 +1,10 @@
+.question-tab {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: var(--font-jet-brains);
+  font-style: normal;
+  color: black;
+  height: calc(100vh - 50px);
+}

@@ -1,0 +1,71 @@
+#question {
+  margin: 0px 10px 10px 10px;
+  border-width: 0px 1px 1px 1px;
+  border-color: black;
+  border-style: solid;
+  padding: 20px;
+  text-align: left;
+  overflow-y: auto;
+  flex: 2;
+  /* height: calc(100vh - 52px); */
+}
+
+#hard {
+  font-weight: bold;
+  color: darkred;
+}
+
+#medium {
+  font-weight: bold;
+  color: darkorange;
+}
+
+#easy {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+#q-title {
+  margin-bottom: 10px;
+}
+
+.line {
+  white-space: pre-line;
+}
+
+#examples {
+  margin: 10px 0px 10px 0px;
+  list-style-type: none;
+}
+
+.example {
+  background-color: lightgoldenrodyellow;
+  padding: 10px;
+}
+
+.io {
+  color: green;
+}
+
+
+#constraints {
+  padding-left: 30px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+#tips {
+  margin-top: 50px;
+  list-style-type: none;
+}
+
+.tip {
+  border-top: 1px solid black;
+  padding-top: 5px;
+  margin: 10px 0 10px 0px;
+}
+
+.tip-title:hover {
+  cursor: pointer;
+  color: darkgray;
+}

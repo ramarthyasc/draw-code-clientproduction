@@ -1,0 +1,22 @@
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #f9faf4;
+}
+
+
+/* #root { */
+/*   height: 100vh; */
+/*   text-align: center; */
+/*   color: #4a6163; */
+/*   font-weight: 400; */
+/*   font-style: normal; */
+/**/
+/* } */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

@@ -1,0 +1,9 @@
+@font-face{
+    font-family: jet-brains;
+    src: url("../assets/fonts/JetBrainsMono-Regular.ttf");
+}
+@import "tailwindcss";
+
+@theme {
+  --font-jet-brains: jet-brains, monospace;
+}

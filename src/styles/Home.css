@@ -1,0 +1,106 @@
+/* @font-face { */
+/*   font-family: Wild; */
+/*   src: url('../assets/fonts/Wildyrus-E4gKe.ttf') format("truetype"); */
+/* } */
+
+
+.home {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.text h1 {
+  color: black;
+  font-size: 3vw;
+}
+
+.text p {
+  padding-top: 2%;
+  font-size: 1vw;
+
+}
+
+.play {
+  padding-top: 5%;
+}
+
+
+.play button {
+  padding: 2vw;
+  clip-path: polygon(4% 20%,
+      0% 80%,
+      30% 80%,
+      34% 100%,
+      100% 50%,
+      30% 0%,
+      30% 20%);
+  background: linear-gradient(to right, #FFD469, #f9a66c);
+  font-family: inherit;
+  font-size: 2vw;
+  border: 0;
+  position: relative;
+  left: 0;
+  transition: left 0.3s;
+
+}
+
+
+.play button:hover {
+  left: 3px;
+  cursor: crosshair;
+  color: lightcyan;
+}
+
+
+
+@keyframes play {
+  0% {
+    left: 0px;
+  }
+
+
+  100% {
+    left: 5px;
+  }
+
+  /* 100% { */
+  /*   left: 0px */
+  /* } */
+
+}
+
+.design {
+  flex: 1;
+  background: linear-gradient(to right, red, black);
+  clip-path: polygon(42.3% 34.77%, 0% 12.47%, 0% 100%, 100% 100%, 100% 39.17%, 55.12% 17.09%);
+}
+
+@media only screen and (max-width: 430px) {
+
+  .app .home {
+    height: 92vh;
+  }
+
+  .text p {
+    font-size: 3vw;
+  }
+
+  .text h1 {
+    font-size: 10vw;
+  }
+
+  .play button {
+    padding: 7vw;
+    font-size: 3vh;
+
+  }
+}

@@ -1,0 +1,61 @@
+.signin-block {
+  display: flex;
+}
+
+.authorize {
+  display: flex;
+  padding-right: 30px;
+  /* padding-top: 0.75vw; */
+  padding-left: 15px;
+  align-items: center;
+
+}
+
+
+.authorize>div {
+  transform: scale(1.3);
+}
+
+
+ul.signin {
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  animation: signin 2s infinite;
+  animation-timing-function: linear;
+  /* padding-top: 1.2vh; */
+  font-size: 1vw;
+  align-items: center;
+}
+
+
+@keyframes signin {
+  0% {
+    left: 0px;
+  }
+
+
+  50% {
+    left: 5px;
+  }
+
+  100% {
+    left: 0px
+  }
+
+}
+
+
+@media only screen and (max-width: 430px) {
+
+  ul.signin {
+    font-size: 2vh;
+    padding-top: 0.5vh;
+  }
+
+  .authorize {
+    padding-top: 3.2vw;
+    padding-left: 3vw;
+  }
+
+}

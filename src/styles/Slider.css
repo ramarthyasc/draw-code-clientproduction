@@ -1,0 +1,18 @@
+.handler {
+  background-color: orange;
+  border: 1px solid grey;
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.handler.pulling {
+  background-color: darkorange;
+  border: 1px solid grey;
+  width: 12x;
+  flex-shrink: 0;
+}
+
+.handler:hover {
+  background-color: darkorange;
+  cursor: ew-resize;
+}

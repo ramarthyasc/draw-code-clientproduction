@@ -1,0 +1,47 @@
+.button-highlight {
+  border: 1px solid lightgrey;
+  color: white;
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.button-select {
+  border: 1px solid black;
+  color: black;
+  background-color: darkgrey;
+  cursor: pointer;
+}
+
+.button-normal {
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+.button-general {
+  user-select: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.button-general:hover {
+  cursor: pointer;
+}
+
+
+
+.code-space.button-normal {
+  border: 1px solid black;
+  color: black;
+  background-color: darkorange;
+  cursor: pointer;
+  /* font-size: 1.2em; */
+  /* font-weight: bold; */
+}
+
+.code-space.button-highlight {
+  border: 1px solid black;
+  color: black;
+  background-color: #FFD469;
+  cursor: pointer;
+}

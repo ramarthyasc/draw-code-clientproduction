@@ -1,0 +1,21 @@
+.question-buttons {
+  border: 1px solid black;
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 70px; */
+  padding: 5px 20px;
+
+}
+
+.left-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+
+.code-button {
+  margin-left: 20px;
+  width: max-content;
+}
