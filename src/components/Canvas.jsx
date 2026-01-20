@@ -370,22 +370,22 @@ export const Canvas = forwardRef((props, canvasRef) => {
 
 
         function onKeyDownWindow(e) {
-            if (e.key === "z" && e.ctrlKey) {
+            if ( e.shiftKey && e.key === "Z") {
                 e.preventDefault();
                 shortcutUndo();
-            } else if (e.key === "x" && e.ctrlKey) {
+            } else if (e.key === "X" && e.shiftKey) {
                 e.preventDefault();
                 shortcutRedo();
-            } else if (e.key === "a" && e.ctrlKey) {
+            } else if (e.key === "A" && e.shiftKey) {
                 e.preventDefault();
                 shortcutShapeSelector("rectangle");
-            } else if (e.key === "s" && e.ctrlKey) {
+            } else if (e.key === "S" && e.shiftKey) {
                 e.preventDefault();
                 shortcutShapeSelector("circle");
-            } else if (e.key === "d" && e.ctrlKey) {
+            } else if (e.key === "D" && e.shiftKey) {
                 e.preventDefault();
                 shortcutShapeSelector("line");
-            } else if (e.key === "f" && e.ctrlKey) {
+            } else if (e.key === "F" && e.shiftKey) {
                 e.preventDefault();
                 shortcutShapeSelector("pencil");
             }
@@ -1005,6 +1005,6 @@ export const Canvas = forwardRef((props, canvasRef) => {
     // onMouseMove is a mine
     return (
         <canvas ref={canvasRef} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave} />
+            onMouseLeave={handleMouseLeave} />
     )
 })

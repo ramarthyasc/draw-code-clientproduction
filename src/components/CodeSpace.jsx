@@ -89,7 +89,7 @@ export const CodeSpace = forwardRef((props, codespaceRef) => {
         pastScrollHeightRef.current = Math.max(pastScrollHeightRef.current, e.target.scrollHeight);
     }
 
-    // Showing numbers
+    // Showing numbers & Tab spacing, newline spacing
     useEffect(() => {
         if (textAreaRef.current) {
             // When we full zoomout the browser, it accomodates less than 300 numbers. So we can put 300 as the maximum number.
@@ -104,8 +104,14 @@ export const CodeSpace = forwardRef((props, codespaceRef) => {
             }
         }
         pastScrollHeightRef.current = textAreaRef.current.scrollHeight;
-
         // numbers showing when scrolling - control the scrolling of numberArea programmatically when i scroll the text area = concept
+
+        // //// Tab spacing ;
+        // function tabspacer() {
+        //
+        // }
+        // textAreaRef.current.addEventListener("keydown", tabspacer);
+
     }, [])
 
     //get QTemplate 
@@ -196,6 +202,41 @@ export const CodeSpace = forwardRef((props, codespaceRef) => {
         }
         setResetMouseDown(false);
     }
+    function handleKeyDown(e) {
+        const el = textAreaRef.current;
+        const posStart = el.selectionStart;
+        const posEnd = el.selectionEnd;
+        if (e.key === "Tab") {
+            e.preventDefault();
+            const indent = "    ";
+            //selectionStart and end is calculated from the 0th index position of the text area value
+            el.value = el.value.slice(0, posStart) + indent + el.value.slice(posEnd);
+            el.selectionStart = el.selectionEnd = posStart + 4;
+
+        } else if (e.key === "Enter" || (e.ctrlKey && e.key === "m")) {
+            // Linefeed tab spacer
+            e.preventDefault();
+            //tab space after line feed
+            let newLineIndex = el.value.slice(0, posStart).lastIndexOf("\n");
+            let blankNum = 0;
+            for (let m = newLineIndex + 1; m < posStart; m++) {
+                const char = el.value.at(m);
+                if (char.charCodeAt(0) >= 33 && // ! character
+                    char.charCodeAt(0) <= 126 // tilde character
+                ) {
+                    break;
+                }
+                blankNum += 1
+            }
+            el.value = el.value.slice(0, posStart) + "\n" + " ".repeat(blankNum) + el.value.slice(posEnd);
+            el.selectionStart = el.selectionEnd = posStart + 1 + blankNum;
+        } else if (e.ctrlKey && e.key === "h") {
+            e.preventDefault();
+            if (posStart === 0 && posEnd === 0) { return; }
+            el.value = el.value.slice(0, posStart - 1) + el.value.slice(posEnd);
+            el.selectionStart = el.selectionEnd = posStart - 1;
+        }
+    }
     useEffect(() => {
         function handleMouseUpWindow() {
             setResetMouseDown(false);
@@ -252,6 +293,20 @@ export const CodeSpace = forwardRef((props, codespaceRef) => {
                             <option value="c" className="hover:cursor-pointer">C</option>
                         </select>
                     </div>
+                    <div className='flex border bg-red-50 rounded-md mx-1 mt-1 mb-1 pl-2 items-center justify-start'>
+                        <div className='text-center font-bold text-blue-800 bg-red-200 px-2 mr-2 rounded-md text-sm'>
+                            BINDINGS:
+                        </div>
+                        <div className='text-sm mx-2'>
+                            <strong>Indent</strong>: Tab, 
+                        </div>
+                        <div className='text-sm mx-1'>
+                            <strong>Newline + Indent</strong>: Enter/Ctrl-M,  
+                        </div>
+                        <div className='text-sm mx-2'>
+                            <strong>Backspace</strong>: Backspace/Ctrl-H 
+                        </div>
+                    </div>
                     <button type="button" onMouseDown={mouseDownReset} onMouseUp={mouseUpReset}
                         className={`border border-solid px-1.5 py-0 mx-1 my-1 rounded-sm cursor-pointer transition-colors duration-300 ease-out active:scale-100 ${colorVariants.darkred.normal}`}>
                         Reset
@@ -263,7 +318,7 @@ export const CodeSpace = forwardRef((props, codespaceRef) => {
                     <textarea ref={numberAreaRef} disabled id="row-number" cols="1"
                         className=" text-right border-t border-r border-b border-black w-10 overflow-hidden resize-none pt-3"
                     > </textarea>
-                    <textarea ref={textAreaRef} onScroll={handleScroll}
+                    <textarea ref={textAreaRef} onScroll={handleScroll} onKeyDown={handleKeyDown}
                         disabled={noSubmit}
                         value={error ? "Error..." : isLoading ? "...loading" : qTemplate}
                         onChange={onTextChange}
