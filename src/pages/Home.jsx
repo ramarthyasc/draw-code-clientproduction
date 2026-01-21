@@ -159,13 +159,19 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex">
-                    <div className="text-8xl mb-20">
-                        Draw-code
+                <div className="flex flex-col items-center">
+                    <div className="flex">
+                        <div className="text-8xl ml-20">
+                            DrawCode
+                        </div>
+                        <div className="pl-5 text-8xl text-amber-400">
+                            →
+                        </div>
                     </div>
-                    <div className="pl-5 text-8xl mb-20 text-amber-400">
-                        →
+                    <div className="flex-2 pt-3 mb-10 text-2xl">
+                        draw first, code next
                     </div>
+
                 </div>
 
                 {/* // TABLE */}
@@ -174,7 +180,7 @@ function Home() {
                         <thead className="h-7">
                             <tr className="border-b font-bold">
                                 <td className="border-r text-center w-10">Id</td>
-                                <td className="border-r text-center w-50">Problem</td>
+                                <td className="border-r pl-2 w-50">Problem</td>
                                 <td className="pl-2 text-center w-30">Difficulty</td>
                             </tr>
                         </thead>
@@ -195,7 +201,7 @@ function Home() {
                                         <td className="border-r px-2">
                                             <Link to={`/draw-code/${obj.name}`}>{obj.name}</Link>
                                         </td>
-                                        <td className="text-center">{obj.difficulty}</td>
+                                        <td className="text-right pr-4">{obj.difficulty}</td>
                                     </tr>
                                 )
                             })
@@ -205,7 +211,7 @@ function Home() {
                     </table >
 
                 </div>
-                <div className="flex  mt-5 justify-center">
+                <div className="flex justify-center">
                     <button id="prev"
                         onClick={() => {
                             prevNextButtonLoadingRef.current = true;
