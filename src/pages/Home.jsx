@@ -78,7 +78,7 @@ function Home() {
         </div>
     } else {
         return (
-            <div className="flex flex-col md:justify-center items-center pb-80 overflow-y-auto md:overflow-clip">
+            <div className="flex flex-col h-full md:h-300 md:justify-center items-center md:pb-80 overflow-y-auto md:overflow-clip">
                 <div className="mt-10 md:mt-10 md:mb-10">
                     <svg className="w-13 md:w-25" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.4999 19.5004H19.4999" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
@@ -86,7 +86,7 @@ function Home() {
                         <path d="M19.6739 5.31238C20.2026 4.7838 20.4997 4.06685 20.4998 3.31923C20.4999 2.57162 20.203 1.85459 19.6744 1.32588C19.1459 0.797172 18.4289 0.500094 17.6813 0.5C16.9337 0.499906 16.2166 0.796805 15.6879 1.32538L2.34193 14.6744C2.10975 14.9059 1.93805 15.1909 1.84193 15.5044L0.520934 19.8564C0.49509 19.9429 0.493138 20.0347 0.515286 20.1222C0.537433 20.2097 0.582855 20.2896 0.646731 20.3534C0.710607 20.4172 0.790555 20.4624 0.878093 20.4845C0.965631 20.5065 1.05749 20.5044 1.14393 20.4784L5.49693 19.1584C5.8101 19.0631 6.09511 18.8925 6.32693 18.6614L19.6739 5.31238Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </div>
-                <div className="relative -top-30 right-0 w-40 md:w-0 md:right-0 md:top-0">
+                <div className="relative -top-40 -right-px w-40 md:w-0 md:right-0 md:top-0">
 
                     <div className="absolute -left-2 top-154 w-full md:w-0 md:left-100 md:top-0">
                         <svg className="md:w-[250px] md:h-[250px]" viewBox="0 0 56 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,7 +139,7 @@ function Home() {
                         </svg>
 
                     </div>
-                    <div className="absolute top-225 left-11 w-18 md:w-0 md:left-120 md:top-105">
+                    <div className="absolute top-225 left-11 w-18 md:w-0 pb-10 md:pb-0 md:left-120 md:top-105">
                         <svg className="md:w-25" viewBox="0 0 42 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.748 9.408C2.188 9.408 1.704 9.312 1.296 9.12C0.888 8.928 0.572 8.656 0.348 8.304C0.124 7.944 0.00800043 7.516 4.17233e-07 7.02H0.96C0.96 7.492 1.12 7.868 1.44 8.148C1.76 8.42 2.196 8.556 2.748 8.556C3.276 8.556 3.688 8.424 3.984 8.16C4.288 7.896 4.44 7.532 4.44 7.068C4.44 6.684 4.336 6.352 4.128 6.072C3.92 5.784 3.628 5.584 3.252 5.472L2.112 5.112C1.512 4.936 1.048 4.636 0.72 4.212C0.4 3.78 0.24 3.276 0.24 2.7C0.24 2.228 0.344 1.824 0.552 1.488C0.76 1.144 1.052 0.876002 1.428 0.684002C1.812 0.492002 2.26 0.396001 2.772 0.396001C3.532 0.396001 4.14 0.608001 4.596 1.032C5.052 1.456 5.28 2.024 5.28 2.736H4.332C4.332 2.28 4.192 1.92 3.912 1.656C3.632 1.392 3.248 1.26 2.76 1.26C2.272 1.26 1.888 1.38 1.608 1.62C1.336 1.852 1.2 2.184 1.2 2.616C1.2 2.992 1.304 3.32 1.512 3.6C1.72 3.88 2.012 4.08 2.388 4.2L3.528 4.56C4.12 4.744 4.58 5.056 4.908 5.496C5.236 5.936 5.4 6.452 5.4 7.044C5.4 7.516 5.288 7.932 5.064 8.292C4.848 8.644 4.54 8.92 4.14 9.12C3.748 9.312 3.284 9.408 2.748 9.408ZM9.88331 9.408C9.13931 9.408 8.54331 9.184 8.09531 8.736C7.65531 8.288 7.43531 7.68 7.43531 6.912V2.688H8.38331V6.912C8.38331 7.432 8.51531 7.84 8.77931 8.136C9.05131 8.424 9.41931 8.568 9.88331 8.568C10.3553 8.568 10.7273 8.424 10.9993 8.136C11.2713 7.84 11.4073 7.432 11.4073 6.912V2.688H12.3553V6.912C12.3553 7.68 12.1313 8.288 11.6833 8.736C11.2353 9.184 10.6353 9.408 9.88331 9.408ZM17.4146 9.408C16.8626 9.408 16.4146 9.26 16.0706 8.964C15.7346 8.66 15.5666 8.248 15.5666 7.728L15.8546 8.124H15.6026V9.288H14.6546V0.528002H15.6026V2.412L15.5906 3.852H15.8186L15.5666 4.248C15.5666 3.736 15.7386 3.328 16.0826 3.024C16.4266 2.72 16.8706 2.568 17.4146 2.568C18.0786 2.568 18.6106 2.788 19.0106 3.228C19.4106 3.668 19.6106 4.264 19.6106 5.016V6.972C19.6106 7.716 19.4106 8.308 19.0106 8.748C18.6106 9.188 18.0786 9.408 17.4146 9.408ZM17.1146 8.58C17.5946 8.58 17.9706 8.436 18.2426 8.148C18.5146 7.86 18.6506 7.452 18.6506 6.924V5.052C18.6506 4.524 18.5146 4.116 18.2426 3.828C17.9706 3.54 17.5946 3.396 17.1146 3.396C16.6506 3.396 16.2826 3.544 16.0106 3.84C15.7386 4.128 15.6026 4.532 15.6026 5.052V6.924C15.6026 7.444 15.7386 7.852 16.0106 8.148C16.2826 8.436 16.6506 8.58 17.1146 8.58ZM21.5139 9.288V2.688H22.3539V3.504H22.5339L22.4019 3.768C22.4019 3.4 22.4979 3.108 22.6899 2.892C22.8899 2.676 23.1619 2.568 23.5059 2.568C23.8659 2.568 24.1459 2.696 24.3459 2.952C24.5539 3.208 24.6619 3.568 24.6699 4.032L24.4179 3.504H24.8139L24.6459 3.768C24.6459 3.4 24.7459 3.108 24.9459 2.892C25.1459 2.676 25.4179 2.568 25.7619 2.568C26.1699 2.568 26.4859 2.72 26.7099 3.024C26.9419 3.328 27.0579 3.732 27.0579 4.236V9.288H26.1699V4.236C26.1699 3.948 26.1059 3.724 25.9779 3.564C25.8499 3.396 25.6699 3.312 25.4379 3.312C25.2059 3.312 25.0219 3.396 24.8859 3.564C24.7499 3.724 24.6819 3.948 24.6819 4.236V9.288H23.8899V4.236C23.8899 3.94 23.8219 3.712 23.6859 3.552C23.5579 3.392 23.3779 3.312 23.1459 3.312C22.9139 3.312 22.7339 3.392 22.6059 3.552C22.4779 3.712 22.4099 3.94 22.4019 4.236V9.288H21.5139ZM28.9373 9.288V8.424H31.2893V3.552H29.2373V2.688H32.2493V8.424H34.4813V9.288H28.9373ZM31.6613 1.476C31.4133 1.476 31.2133 1.412 31.0613 1.284C30.9173 1.156 30.8453 0.980002 30.8453 0.756002C30.8453 0.524002 30.9173 0.340002 31.0613 0.204002C31.2133 0.0680015 31.4133 1.43051e-06 31.6613 1.43051e-06C31.9093 1.43051e-06 32.1053 0.0680015 32.2493 0.204002C32.4013 0.340002 32.4773 0.524002 32.4773 0.756002C32.4773 0.972002 32.4013 1.148 32.2493 1.284C32.1053 1.412 31.9093 1.476 31.6613 1.476ZM39.3966 9.288C38.8446 9.288 38.4166 9.144 38.1126 8.856C37.8086 8.56 37.6566 8.144 37.6566 7.608V3.552H35.7846V2.688H37.6566V0.828001H38.6166V2.688H41.2686V3.552H38.6166V7.608C38.6166 8.152 38.8766 8.424 39.3966 8.424H41.1486V9.288H39.3966Z" fill="black" />
                         </svg>
@@ -161,34 +161,34 @@ function Home() {
 
                 <div className="flex flex-col items-center">
                     <div className="flex">
-                        <div className="text-5xl font-bold mt-6 ml-10 md:mt-0 md:text-8xl md:ml-20">
+                        <div className="text-5xl font-bold mt-6 ml-8 md:mt-0 md:text-8xl md:ml-20">
                             DrawCode
                         </div>
                         <div className="text-5xl pr-3 mt-6 md:mt-0 md:pl-5 md:text-8xl text-amber-400">
                             →
                         </div>
                     </div>
-                    <div className="flex-2 mb-5 md:pt-3 md:mb-10 md:text-2xl">
+                    <div className="flex-2 mb-5 mr-2 md:mr-0 md:pt-3 md:mb-10 md:text-2xl">
                         draw first, code next
                     </div>
 
                 </div>
 
                 {/* // TABLE */}
-                <div className="w-72 min-h-68 mb-2 md:h-80 md:mb-0 md:w-100 overflow-clip ">
-                    <table className="ml-0 md:h-0 md:ml-0 md:w-100 table-fixed ">
+                <div className="w-72 min-h-60 md:h-80 md:mb-0 md:w-100 overflow-clip ">
+                    <table className="ml-1 md:h-0 md:ml-0 md:w-100 table-fixed ">
                         <thead className="md:h-7">
                             <tr className="border-b font-bold">
                                 <td className="border-r pr-1 text-sm md:text-base md:pr-0 text-center w-5 md:w-10">Id</td>
                                 <td className="border-r pl-2 text-sm md:text-base w-50 md:w-50">Problem</td>
-                                <td className="text-right md:text-center w-26 text-sm md:text-base md:w-30">Mode</td>
+                                <td className="text-right md:text-center text-sm md:text-base md:w-30">Mode</td>
                             </tr>
                         </thead>
                         <tbody >
                             {questionsList.map((obj, i) => {
                                 return (
                                     <tr className={`${questionsList.length - 1 === i ? "" : "border-b"}`} key={obj.id}>
-                                        <td className="border-r pr-1 text-center">
+                                        <td className="border-r pr-1 text-center text-sm md:text-base">
                                             {
                                                 prevNextButtonLoadingRef.current ?
                                                     <span>*</span> :
@@ -198,10 +198,10 @@ function Home() {
 
                                             }
                                         </td>
-                                        <td className="border-r px-2">
+                                        <td className="border-r px-2 text-sm md:text-base">
                                             <Link to={`/draw-code/${obj.name}`}>{obj.name}</Link>
                                         </td>
-                                        <td className=" text-right md:text-center">{obj.difficulty}</td>
+                                        <td className=" text-right text-sm pl-1 md:pl-0 md:text-base md:text-center">{obj.difficulty}</td>
                                     </tr>
                                 )
                             })
