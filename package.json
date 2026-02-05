@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy":"rm -r ../leetcode_project/packages/express_backend_app/dist/dist/ && cp -r ./dist ../leetcode_project/packages/express_backend_app/dist/",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest"
