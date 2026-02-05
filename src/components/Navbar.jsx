@@ -1,4 +1,3 @@
-import '../styles/Navbar.css';
 import Signin from './Signin.jsx';
 import Userin from './Userin.jsx';
 import { Link } from 'react-router-dom';
@@ -27,11 +26,12 @@ function Navbar({ setIsLoggedIn, isLoggedIn, setJsonWebToken, setUser, user, isA
             <nav className={`flex relative justify-between items-center bg-linear-to-r 
         ${!isAdmin ? "from-[#FFD469] to-[#F9A66C]" : "from-yellow-300 to-pink-400"}  h-13`}>
                 <div className='flex'>
-                    <Link to='/'><img src={logo} alt="home" className='logo' /></Link>
+
+                    <Link to='/'><img src={logo} alt="home" className='w-10 h-10 border rounded-2xl  ml-4' /></Link>
                     {isAdmin ?
                         "" :
                         <Link to='/administrator/question-list' 
-                        className='ml-10 flex pt-2 items-center hover:opacity-80' >Admin</Link>
+                        className='ml-4 flex items-center hover:opacity-80 border rounded-2xl px-2 py-0 border-amber-700 my-2 mt-2 ' >Admin</Link>
                     }
 
                 </div>

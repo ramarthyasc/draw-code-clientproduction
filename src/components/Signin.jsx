@@ -1,8 +1,8 @@
-import { useEffect, useId } from 'react';
-import '../styles/Signin.css';
+import { useEffect } from 'react';
+import googleSvg from "../assets/google.svg";
 
 function Signin({ setIsLoggedIn, setJsonWebToken, setUser }) {
-    const navId = useId();
+    // const navId = useId();
 
     async function handleCredentialResponse(response) {
 
@@ -51,7 +51,7 @@ function Signin({ setIsLoggedIn, setJsonWebToken, setUser }) {
         });
 
         google.accounts.id.renderButton(
-            document.getElementById(navId),
+            document.getElementById("google-hidden-btn"),
             {
                 type: "icon",
                 size: "small",
@@ -65,13 +65,12 @@ function Signin({ setIsLoggedIn, setJsonWebToken, setUser }) {
 
     return (
         <>
-            <div className='signin-block'>
-                <ul className='signin'>
-                    <li>Sign in</li>
-                </ul>
-                <div className='authorize'>
-                    <div id={navId}></div>
-                </div>
+            <div className='flex'>
+                {/* <div className='mt-1'>Sign in</div> */}
+                <div id="google-hidden-btn" className='hidden' />
+                <img src={googleSvg} alt="signin" onClick={() => {
+                    document.querySelector("#google-hidden-btn div[role=button]").click()}}
+                    className='w-8 h-8 ml-2 mr-4 cursor-pointer' />
             </div>
         </>
     )
