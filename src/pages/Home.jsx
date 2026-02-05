@@ -181,7 +181,7 @@ function Home() {
                             <tr className="border-b font-bold">
                                 <td className="border-r pr-1 text-sm md:text-base md:pr-0 text-center w-5 md:w-10">Id</td>
                                 <td className="border-r pl-2 text-sm md:text-base w-50 md:w-50">Problem</td>
-                                <td className="text-right md:text-center text-sm md:text-base md:w-30">Mode</td>
+                                <td className="text-right md:text-center text-sm md:text-base md:w-20">Mode</td>
                             </tr>
                         </thead>
                         <tbody >
